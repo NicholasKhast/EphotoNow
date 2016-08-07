@@ -1,93 +1,32 @@
-<% if current_user %>
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1 id="homeHeading">Welcome To The EphotoNow App</h1>
+      <h2 style="text-align: center;">You Will Love Managing Your Photos With</br>Our Application</h2>
+    </div>
+  </div>
+</header>
+<section id="about" class="about-section">
+  <h2 style="text-align: center;">Choose your plan and start discovering</h2>
+  <div class="wrap">
+    <div class="box">
+      <h1>Premium Plan</h1>
+      <p class="price">10€/M </p>
+      <p class="about">Unlimited Image Uploads</p>
+      <p class="about">Responsive Design</p>
+      <p class="about">Acceess Anywhere</p>
+      <p class="about">X</p>
+      <%= link_to "Sign Up", new_user_registration_path, :class =>"button" %>
+   </div>
+   <div class="box">
+     <h1>Platinum Plan</h1>
+     <p class="price">20€/M</p>
+     <p class="about">Unlimited Image Uploads</p>
+     <p class="about">Responsive Design</p>
+     <p class="about">Acceess Anywhere</p>
+     <p class="about">Unlimited Projects</p>
+     <%= link_to "Sign Up", new_user_registration_path, :class =>"button" %>
+   </div>
+  </div>
+</section>
 
-<h3>Welcome: <%= current_user.email %></h3>
-
-<% else %>
-
-<div class="jumbotron">
-
-<h2>Welcome to the Photo Management App!</h2>
-
-<p class="lead">
-
-You'll love managing your Photos with our application. Sign up!
-
-</p>
-
-</div>
-
-<div class="row">
-
-<div class="plans clearfix">
-
-<div class="col-lg-3 col-lg-offset-3 plan">
-
-<h2>Premium Plan</h2>
-
-<div class="price pull-right">
-
-Price: $10
-
-</div>
-
-<div class="features">
-
-<ul>
-
-<li>Unlimited Image Uploads</li>
-
-<li>Responsive design</li>
-
-<li>Access anywhere</li>
-
-</ul>
-
-</div>
-
-<p>
-
-<%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
-
-</p>
-
-</div>
-
-<div class="col-lg-3 plan">
-
-<h2>Amaze Plan</h2>
-
-<div class="price pull-right">
-
-Price: $20
-
-</div>
-
-<div class="features">
-
-<ul>
-
-<li>Unlimited Image Uploads</li>
-
-<li>Responsive design</li>
-
-<li>Access anywhere</li>
-
-<li class='extra'>Unlimited projects</li>
-
-</ul>
-
-</div>
-
-<p>
-
-<%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<% end %>
